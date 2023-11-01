@@ -1,6 +1,6 @@
 let screenHeight = 737;
 let screenWidth = 1535;
-let clickCount;
+let clickCount = 0;
 
 let masterY = 100
 
@@ -21,7 +21,8 @@ function setup() {
 }
 
 function master (){
-if (clickCount=1) {
+  // clickCount = clickCount +1;
+if (clickCount<=1) {
 
   let masterDisplay = createP("WHEATFIELD");
   masterDisplay.position(displayWidth/2,masterY);
@@ -34,12 +35,11 @@ if (clickCount=1) {
 }
 }
 
+function mouseReleased () {
+  clickCount++;
+  }
 
 
-// function clicked(n) {
-//   //increase click counter
-//   clickCount = clickCount + 1;
-// }
 
 
 //make click number variable, based on mose clicks
